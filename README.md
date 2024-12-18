@@ -78,6 +78,10 @@ IP Address: 192.168.x.x
   ```
 - The temperature graph should be displayed on the webpage.
 
+  ![unnamed (1)](https://github.com/user-attachments/assets/604128b0-0a48-429d-ad58-0884c312549f)
+
+- If everything works you will see the graph updating in real-time!
+
 ## How It Works
 
 - The ESP32 reads the temperature from the LM35 sensor every second.
