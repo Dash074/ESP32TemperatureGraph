@@ -48,8 +48,8 @@ const char htmlContent[] PROGMEM = R"rawliteral(
 #include <ESPAsyncWebServer.h>
 
 // WiFi credentials
-const char* ssid = "realnigga";
-const char* password = "meow3000";
+const char* ssid = "<your-wifi-name>";
+const char* password = "<your-wifi-password>";
 
 // LM35 sensor pin
 const int LM35_PIN = 36; // Use an ADC pin (e.g., GPIO34)
@@ -96,8 +96,8 @@ void setup() {
   // Print the IP address after connecting to WiFi
   Serial.println("Connected to WiFi");
   Serial.print("IP Address: ");
-  Serial.println(WiFi.localIP());  // Print the local IP address
-
+  Serial.println(WiFi.localIP());  
+  
   // Serve WebSocket
   ws.onEvent(onWebSocketEvent);
   server.addHandler(&ws);
@@ -113,5 +113,5 @@ void setup() {
 
 void loop() {
   sendTemperature();
-  delay(1000); // Update every second
+  delay(1000); 
 }
